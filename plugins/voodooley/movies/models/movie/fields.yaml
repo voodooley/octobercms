@@ -1,0 +1,53 @@
+fields:
+    name:
+        label: 'Название фильма'
+        span: full
+        type: text
+    description:
+        label: 'Описание фильма'
+        size: ''
+        span: full
+        type: richeditor
+    year:
+        label: 'Год выпуска'
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    poster:
+        label: 'Постер фильма'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    movie_gallery:
+        label: Картинки
+        mode: image
+        imageWidth: '80'
+        imageHeight: '80'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    genres:
+        label: Жанры
+        nameFrom: genre_title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    actors:
+        label: 'Актеры'
+        span: left
+        type: actorbox

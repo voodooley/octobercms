@@ -1,0 +1,10 @@
+name: Actors
+modelClass: Voodooley\Movies\Models\Actor
+form: $/voodooley/movies/models/actor/fields.yaml
+defaultRedirect: voodooley/movies/actors
+create:
+    redirect: 'voodooley/movies/actors/update/:id'
+    redirectClose: voodooley/movies/actors
+update:
+    redirect: voodooley/movies/actors
+    redirectClose: voodooley/movies/actors

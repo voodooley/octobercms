@@ -1,0 +1,9 @@
+fields:
+    name:
+        label: Имя
+        span: auto
+        type: text
+    lastname:
+        label: Фамилия
+        span: auto
+        type: text

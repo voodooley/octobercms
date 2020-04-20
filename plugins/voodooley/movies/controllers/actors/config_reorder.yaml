@@ -1,0 +1,5 @@
+title: Actors
+modelClass: Voodooley\Movies\Models\Actor
+nameFrom: lastname
+toolbar:
+    buttons: reorder_toolbar

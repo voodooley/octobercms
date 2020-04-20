@@ -1,0 +1,17 @@
+<header class="main-header">
+    <div class="container">
+        <div class="main-header__inner">
+
+            <h1 class="logo">October Movies</h1>
+
+            <nav class="main-nav">
+
+                <a class="main-nav__link {% if this.page.id == 'main-page' %} active {% endif %}" href="{{'main-page'| page}}">Главная</a>
+                <a class="main-nav__link {% if this.page.id == 'movies' %} active {% endif %}" href="{{'movies'| page}}">Фильмы</a>
+
+            </nav>
+
+        </div>
+
+    </div>
+</header>

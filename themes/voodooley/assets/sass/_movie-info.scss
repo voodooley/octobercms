@@ -1,0 +1,32 @@
+.movie-info {
+    display: flex;
+    width: 100%;
+
+    &__link {
+        color: #1C293A;
+        font-size: 14px;
+
+        &:hover {
+            color: #658FC0;
+        }
+    }
+}
+
+.movie-info__header {
+    font-size: 18px;
+    font-weight: 400;
+    color: #BB034B;
+    text-decoration: underline;
+    margin: 16px 0;
+
+}
+
+.actors, .genres {
+    width: 50%;
+}
+.actor__name {
+    color: #1C293A;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+//1C293A • 658FC0 • B2D0F7 • F931A5 • BB034B

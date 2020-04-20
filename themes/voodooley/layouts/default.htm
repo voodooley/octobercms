@@ -1,0 +1,33 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Movies - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="voodooley">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Voodooley">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        <link href="{{'assets/dist/css/style.css'|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>
+
+        {% partial "header" %}
+
+        <!-- Content -->
+        <section class="container">
+            {% page %}
+        </section>
+        {% partial "footer" %}
+        <!-- Scripts -->
+        <script src="{{'assets/js/jquery.js'|theme }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="{{'assets/dist/js/app.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+    </body>
+</html>

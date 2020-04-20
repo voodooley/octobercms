@@ -1,0 +1,76 @@
+title = "Фильм"
+url = "/movies/movie/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Voodooley\Movies\Models\Movie"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    <h2>{{ record.name }}</h2>
+    <img src="{{ record.poster.thumb(200, auto) }}" alt="{{ record.name }}">
+
+    <h4>{{ record.year }}</h4>
+    <h3>Описание фильма</h3>
+
+    {{ record.description|raw }}
+
+
+
+    <div class="movie-info">
+        <div class="actors">
+            <h3 class="movie-info__header" >В главных ролях:</h3>
+            {% for actor in record.actors %}
+                <div class="actor">
+                    <div class="actor__name">
+                        {{ actor.name }}
+                        {{ actor.lastname }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="genres">
+            <h3 class="movie-info__header">Жанр:</h3>
+
+            {% for genre in record.genres %}
+
+                <a class="movie-info__link" href="/genres/{{ genre.slug }}">{{genre.genre_title}}</a>
+
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+    {% if record.movie_gallery is not empty %}
+        <h3>Галлерея</h3>
+
+        <ul class="gallery">
+
+            {% for image in record.movie_gallery %}
+                <li>
+                    <a href="{{ image.path }}">
+                        <img src="{{ image.thumb(80, 80, {'mode':'crop'}) }}" alt="{{ record.name }}">
+                    </a>
+                </li>
+
+            {% endfor %}
+
+        </ul>
+
+    {% endif %}
+
+
+
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

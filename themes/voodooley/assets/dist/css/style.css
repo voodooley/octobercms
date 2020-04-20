@@ -1,0 +1,408 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900&display=swap&subset=cyrillic-ext);/* Vendor */
+
+/* Setup */
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =======================================================================
+## ++ Media Queries
+========================================================================== */
+
+/* 
+    Used for media queries. 
+    Add these mixins in your normal scss flow.
+
+    Eg.
+    .container{
+        width:1024px;
+
+        @include tablets{
+            width:90%;
+        }
+    }
+*/
+
+/* =======================================================================
+## ++ Unit transform
+========================================================================== */
+
+/*  
+    Used for making containers have width in percentages. 
+    Usage: define elemnt width in px and the width of parent elemnt in px. 
+    eg. .block{width:cp(512px, 1024px)} this will result in .block{width:50%;}   
+*/
+
+/*  
+    Used for making px values convert to rem values
+    Usage: define font-size in px and it will convert to rems
+    eg. font-size: rem(14px);
+*/
+
+/*! Typebase.less v0.1.0 | MIT License */
+
+/* Setup */
+
+html {
+  /* Change default typefaces here */
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Copy & Lists */
+
+p {
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+ul,
+ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+ul li,
+ol li {
+  line-height: 1.5rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+blockquote {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Change heading typefaces here */
+  font-family: "Roboto", sans-serif;
+  margin-top: 1em;
+  padding-top: 1em;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  color: #1C293A;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1rem;
+  line-height: 4.5rem;
+  margin-top: 3rem;
+}
+
+h2 {
+  font-size: 1rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 1.414rem;
+}
+
+h4 {
+  font-size: 0.707rem;
+}
+
+h5 {
+  font-size: 0.4713333333rem;
+}
+
+h6 {
+  font-size: 0.3535rem;
+}
+
+/* =======================================================================
+## ++ Globals
+========================================================================== */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  color: #566b78;
+}
+
+.container {
+  max-width: 40em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #e81c4f;
+}
+
+.main-header {
+  background: #1C293A;
+}
+
+.main-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header__inner h1 {
+  color: #B2D0F7;
+  font-size: 26px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-nav__link {
+  padding: 0 10px;
+  color: #BB034B;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  transition: color 0.2s linear;
+}
+
+.main-nav__link:last-child {
+  padding-right: 0;
+}
+
+.main-nav__link:hover,
+.main-nav__link.active {
+  color: #F931A5;
+}
+
+.main-footer {
+  background: #B2D0F7;
+  padding: 20px 0;
+  margin-top: 40px;
+  color: #658FC0;
+}
+
+.main-footer h3 {
+  margin: 0;
+  color: #1C293A;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination li {
+  margin-right: 10px;
+}
+
+.pagination li.active > a {
+  text-decoration: none;
+  color: #e89993;
+  cursor: default;
+}
+
+.pagination li:last-child {
+  margin-right: 0;
+}
+
+.gallery {
+  margin: 0 -10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #fff;
+}
+
+.gallery li {
+  margin: 10px;
+}
+
+.movie-info {
+  display: flex;
+  width: 100%;
+}
+
+.movie-info__link {
+  color: #1C293A;
+  font-size: 14px;
+}
+
+.movie-info__link:hover {
+  color: #658FC0;
+}
+
+.movie-info__header {
+  font-size: 18px;
+  font-weight: 400;
+  color: #BB034B;
+  text-decoration: underline;
+  margin: 16px 0;
+}
+
+.actors,
+.genres {
+  width: 50%;
+}
+
+.actor__name {
+  color: #1C293A;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+

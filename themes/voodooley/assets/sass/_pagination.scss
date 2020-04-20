@@ -1,0 +1,19 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+        margin-right: 10px;
+        &.active > a {
+            text-decoration: none;
+            color: #e89993;
+            cursor: default;
+        }
+    }
+    li:last-child {
+        margin-right: 0;
+    }
+
+
+}

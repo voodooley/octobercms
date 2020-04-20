@@ -1,0 +1,11 @@
+.gallery {
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #fff;
+
+    & li {
+        margin: 10px;
+    }
+}
