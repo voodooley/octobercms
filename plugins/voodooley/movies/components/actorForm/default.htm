@@ -1,0 +1,15 @@
+<form class="contact-form" data-request="onSave" action="">
+
+    <label for="name">Имя актера</label>
+        <input type="text" name="name">
+
+    <label for="last_name">Фамилия актера</label>
+        <input type="text" name="last_name">
+
+    <button type="submit">Сохранить</button>
+
+    {% flash success %}
+        <p>{{ message }}</p>
+    {% endflash %}
+
+</form>

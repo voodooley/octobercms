@@ -29,7 +29,8 @@ class Actor extends Model
         ]
     ];
 
-    public function getFullNameAttribute() {
+    public function getFullNameAttribute()
+    {
         return $this->name . " " . $this->lastname;
     }
 

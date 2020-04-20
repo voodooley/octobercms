@@ -4,7 +4,6 @@ namespace Voodooley\Contact\Components;
 use CMS\Classes\ComponentBase;
 use Input;
 use Mail;
-use Psy\Command\ReflectingCommand;
 use Validator;
 use Redirect;
 
