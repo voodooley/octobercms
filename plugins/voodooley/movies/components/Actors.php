@@ -27,6 +27,21 @@ class Actors extends ComponentBase
                 'validationPattern' => '^[0-9]+$',
                 'validationMessage' => 'Разрешены только цифры'
             ],
+
+            'sortOrder' => [
+                'title' => 'Сортировать',
+                'description' => 'Сортировать по',
+                'type' => 'dropdown',
+                'default' => 'Name ASC'
+            ],
+        ];
+    }
+
+    public function getSortOrderOptions()
+    {
+        return [
+            'name asc' => 'Имя (по возрастанию)',
+            'name desc' => 'Имя (по убыванию)'
         ];
     }
 
@@ -38,6 +53,14 @@ class Actors extends ComponentBase
     protected function loadActors()
     {
         $query = Actor::all();
+
+        if ($this->property('sortOrder') == 'name asc') {
+            $query = $query->sortBy('name');
+        }
+
+        if ($this->property('sortOrder') == 'name desc') {
+            $query = $query->sortByDesc('name');
+        }
 
         if ($this->property('results') > 0) {
             $query = $query->take($this->property('results'));
