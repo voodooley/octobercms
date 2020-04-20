@@ -21,7 +21,7 @@ package-lock.json
 _ide_helper.php
 storage/
 tests/
-config/mail.php
+/config/mail.php
 
 # for netbeans
 nbproject
