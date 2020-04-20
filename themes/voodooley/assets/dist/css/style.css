@@ -433,6 +433,10 @@ a {
   border: 1px solid #1C293A;
 }
 
+.contact-form input.input-error {
+  border: 2px red solid;
+}
+
 .contact-form textarea {
   padding: 10px 15px;
   width: 100%;

@@ -21,6 +21,10 @@
         &:hover, &:focus {
             border: 1px solid #1C293A;
         }
+
+        &.input-error {
+            border: 2px red solid;
+        }
     }
 
     textarea {
@@ -61,3 +65,4 @@
         }
     }
 }
+
